@@ -1,3 +1,7 @@
+init:
+	dep ensure
+	cp config.example.json config.json
+
 serve:
 	go run cmd/eventapi/*.go
 

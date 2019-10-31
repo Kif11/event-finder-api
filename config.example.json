@@ -1,0 +1,9 @@
+{
+  "Address": "localhost",
+  "Port": 8080,
+  "MeetupToken": "",
+  "CouchsurfingPrivateKey": "",
+  "CouchsurfingAccessToken": "",
+  "CouchsurfingUID": "",
+  "EventbriteAuthToken:": ""
+}

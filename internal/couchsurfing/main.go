@@ -11,6 +11,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"net/url"
+	"strconv"
 	"time"
 
 	"github.com/rs/xid"
@@ -79,7 +80,7 @@ func (api CouchsurfingAPI) FetchEvents(config common.Config, startTime time.Time
 	}
 
 	if resp.StatusCode != http.StatusOK {
-		return events, errors.New("couchsurfing: request failed with code " + string(resp.StatusCode))
+		return events, errors.New("couchsurfing: request failed with code " + strconv.Itoa(resp.StatusCode))
 	}
 
 	var eventsResponse EventsResponse
