@@ -2,24 +2,16 @@ package main
 
 import (
 	"eventapi/internal/common"
-	"eventapi/internal/database"
-
-	"github.com/jinzhu/gorm"
 )
 
-// Server common struct for holding reference to Database etc.
+// Server common struct for holding app data
 type Server struct {
-	DB     *gorm.DB
 	Config common.Config
 }
 
 // InitServer initialize server componets
 func (s *Server) InitServer() {
-	db, err := database.Init()
-	if err != nil {
-		panic(err)
-	}
-	s.DB = db
+	// TODO: Init database here
 
 	conf, err := common.ReadConfig("config.json")
 	if err != nil {

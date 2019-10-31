@@ -73,7 +73,7 @@ func FetchEvents(config common.Config, lat float64, lon float64, totalTime strin
 func main() {
 	server := Server{}
 	server.InitServer()
-	defer server.DB.Close()
+
 	config := server.Config
 
 	schema, err := BuildSchema(&server)
